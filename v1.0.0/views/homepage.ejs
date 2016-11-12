@@ -1,0 +1,12 @@
+<!-- Simply include the sails.io.js script, and a client socket will be created for you -->
+<h1>Hello</h1>
+<script type"text/javascript" src="/js/dependencies/sails.io.js"></script>
+<script type"text/javascript">
+io.socket.get('/join/room/', function (resData) {
+    console.log(resData)
+});
+
+io.socket.on('message', function (data){
+  console.log(data);
+});
+</script>
